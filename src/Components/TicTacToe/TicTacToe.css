@@ -1,0 +1,192 @@
+.container{
+  text-align: center;
+}
+.title{
+  margin-top: 50px;
+  color: #fff;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title span{
+  color: #ff8a00;
+  padding-left: 15px;
+}
+.reset{
+  width: 210px;
+  height: 60px;
+  background-color: #ff8a00;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 24px;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas com tamanho igual */
+  gap: 10px; /* Espaço entre as células */
+  width: 473px;
+  margin: auto;
+}
+
+.boxes {
+  height: 120px;
+  width: 150px;
+  background: #1f3540;
+  border: 4px solid #0f1b21;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxes img{
+  margin: 50px 50px;
+}
+
+.winner {
+  margin-top: 20px; /* Espaço acima da mensagem */
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #ff8a00; /* Cor que combina com o botão */
+  text-align: center; /* Centraliza o texto */
+  transition: color 0.3s; /* Efeito de transição suave para a cor */
+}
+
+.winner:hover {
+  color: #fff; /* Altera a cor para branco ao passar o mouse */
+}
+
+/* Media Queries */
+
+/* For tablets and smaller desktop screens */
+@media screen and (max-width: 768px) {
+  .board {
+    width: 380px;
+    gap: 8px;
+  }
+
+  .boxes {
+    height: 100px;
+    width: 120px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .reset {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .boxes img {
+    margin: 40px 40px;
+  }
+}
+
+/* For mobile phones in landscape */
+@media screen and (max-width: 576px) {
+  .board {
+    width: 300px;
+    gap: 6px;
+  }
+
+  .boxes {
+    height: 80px;
+    width: 90px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .reset {
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .boxes img {
+    margin: 30px 30px;
+  }
+
+  .winner {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
+
+/* For mobile phones in portrait */
+@media screen and (max-width: 380px) {
+  .board {
+    width: 240px;
+    gap: 5px;
+  }
+
+  .boxes {
+    height: 65px;
+    width: 75px;
+    border-width: 3px;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .title span {
+    padding-left: 10px;
+  }
+
+  .reset {
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .boxes img {
+    margin: 20px 20px;
+  }
+
+  .winner {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+}
+
+/* Media Query para dispositivos entre 360px e 768px */
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+
+  html, body {
+    overflow: hidden; /* Remove rolagem lateral ou horizontal */
+    width: 100vw; /* Largura da tela */
+    height: 100vh; /* Altura da tela */
+  }
+  
+  .board {
+    width: 300px; /* Ajustar a largura do tabuleiro */
+  }
+
+  .title {
+    font-size: 28px; /* Ajustar o tamanho da fonte */
+  }
+
+  .reset {
+    width: 160px; /* Ajustar a largura do botão */
+    height: 45px; /* Ajustar a altura do botão */
+    font-size: 18px; /* Ajustar o tamanho da fonte do botão */
+  }
+}
